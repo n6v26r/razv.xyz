@@ -4,6 +4,7 @@
   import { browser } from "$app/environment";
   import { scale } from "svelte/transition";
   import { clickOutside } from "$lib/clickoutside";
+  import { systemThemePreference } from "$lib/stores/theme";
   type Theme = FlavorName | "system";
 
   const themes: {
@@ -36,13 +37,17 @@
 
   async function setTheme(selectedTheme: Theme) {
     themeMenuDropdownShow = false;
-    if(selectedTheme == currentTheme)
-      return;
+    if (selectedTheme == currentTheme) return;
 
-    if (!document.startViewTransition) {
+    if (
+      !document.startViewTransition ||
+      (currentTheme == "system" && selectedTheme === $systemThemePreference) ||
+      (selectedTheme == "system" && currentTheme === $systemThemePreference)
+    ) {
       _setTheme(selectedTheme);
       return;
     }
+
     setTimeout(() => {
       document.startViewTransition(async () => {
         _setTheme(selectedTheme);
