@@ -26,22 +26,28 @@
   );
 
   let themeMenuDropdownShow = $state(false);
+  const themeMenuDropdownAnimDur = 150;
 
   function _setTheme(selectedTheme: Theme) {
-    themeMenuDropdownShow = false;
     document.documentElement.setAttribute("data-theme", selectedTheme);
     if (browser) localStorage.setItem("theme", selectedTheme);
     currentTheme = selectedTheme;
   }
 
-  function setTheme(selectedTheme: Theme) {
+  async function setTheme(selectedTheme: Theme) {
+    themeMenuDropdownShow = false;
+    if(selectedTheme == currentTheme)
+      return;
+
     if (!document.startViewTransition) {
       _setTheme(selectedTheme);
       return;
     }
-    document.startViewTransition(async () => {
-      _setTheme(selectedTheme);
-    });
+    setTimeout(() => {
+      document.startViewTransition(async () => {
+        _setTheme(selectedTheme);
+      });
+    }, themeMenuDropdownAnimDur);
   }
 
   let themeMenuBtn = $state(null);
@@ -62,7 +68,7 @@
 {#if themeMenuDropdownShow}
   <div
     class="theme-menu-dropdown"
-    transition:scale={{ duration: 150 }}
+    transition:scale={{ duration: themeMenuDropdownAnimDur }}
     use:clickOutside={{
       callback: () => (themeMenuDropdownShow = false),
       ignore: [themeMenuBtn],
@@ -94,14 +100,23 @@
     }
   }
 
+  @keyframes move-out {
+    0% {
+      clip-path: circle(150% at 100% 0%);
+    }
+
+    100% {
+      clip-path: circle(0% at 100% 0%);
+    }
+  }
+
   :root::view-transition-old(root) {
-    // animation: 150ms cubic-bezier(0.4, 0, 1, 1) both fade-out;
-    animation: 150ms linear both fade-out;
+    animation: 500ms linear both move-out;
+    z-index: 10;
   }
 
   :root::view-transition-new(root) {
-    // animation: 300ms cubic-bezier(0, 0, 0.2, 1) 150ms both fade-in;
-    animation: 150ms linear 150ms both fade-in;
+    z-index: 9;
   }
 
   .theme-menu {
