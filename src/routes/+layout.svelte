@@ -4,7 +4,6 @@
 	import Navbar from "$lib/components/navbar.svelte";
 	import "@fortawesome/fontawesome-free/css/all.min.css";
 	import { fly, fade } from "svelte/transition";
-    import { systemThemePreference } from "$lib/stores/theme";
 
 	export let data;
 	let visible = false;
@@ -13,6 +12,7 @@
 		visible = true;
 	});
 </script>
+
 
 <svelte:head>
 	<script>
