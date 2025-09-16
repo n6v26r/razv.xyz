@@ -27,7 +27,7 @@ h1 {
 }
 
 pre[class^="language-"] {
-  border-left: 0.5rem solid var(--sky) !important;
+  border-left: var(--border-big) solid var(--sky) !important;
   margin-left: 0 !important;
   background-color: var(--surface0);
   display: box;
@@ -52,7 +52,7 @@ code:not([class^="language-"]) {
 }
 
 code[class^="language-"] {
-  font-size: 0.8rem;
+  font-size: 0.8em;
   padding-right: 1em;
   padding-left: 1em;
   display: block;
@@ -87,7 +87,7 @@ table {
   td,
   thead,
   tbody {
-    border: 1px solid var(--overlay0);
+    border: var(--border-small) solid var(--overlay0);
   }
 
   thead {
@@ -117,7 +117,7 @@ input[type="checkbox"] {
   height: 1em;
   vertical-align: text-bottom;
   position: relative;
-  border: 1px solid var(--overlay1);
+  border: var(--border-small) solid var(--overlay1);
   border-radius: 10px;
   background-color: var(--surface1);
   cursor: pointer;

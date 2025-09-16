@@ -139,7 +139,7 @@
     right: 1%;
 
     border-radius: var(--border-radius-normal);
-    border: solid var(--blue);
+    border: var(--border-smallish) solid var(--blue);
     transition: all 0.1s;
     margin: 0;
     background-color: var(--base);

@@ -65,9 +65,11 @@
 }
 
 :root {
-  --border-colored-small: 2px;
-  --border-colored-med: 3px;
-  --border-colored-big: 6px;
+  --border-small: 1px;
+  --border-smallish: 2px;
+  --border-med: 3px;
+  --border-big: 5px;
+
   --border-radius-normal: 6px;
   --border-radius-large: 12px;
 
@@ -121,15 +123,6 @@ html {
   padding: 0;
 }
 
-swapquote {
-  border: 0;
-  margin-right: 0;
-  border-left: 5px solid var(--surface0);
-  padding-left: 0.5em;
-  margin-left: 2em;
-  line-break: strict;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -176,7 +169,7 @@ a[href]:not(:where([href^="#"],
 
 blockquote {
   border: 0;
-  border-left: 5px solid var(--surface0);
+  border-left: var(--border-big) solid var(--surface2);
   padding-left: 0.5em;
   margin-left: 2em;
   margin-right: 2em;
