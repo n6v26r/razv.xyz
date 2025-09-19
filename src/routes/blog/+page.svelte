@@ -148,4 +148,28 @@
     align-items: center;
     color: var(--surface2);
   }
+
+  button.tag-btn {
+    font-family: "LXGW WenKai Mono TC";
+
+    &.selected {
+      font-weight: bold;
+      outline: var(--pink) calc(0.8 * var(--space-xxs)) solid;
+
+      &:before {
+        font-family: "Nerd Font";
+        content: " ";
+        color: var(--pink);
+      }
+    }
+
+    margin: var(--space-xxs);
+    padding: var(--space-xxs) var(--space-xs);
+    font-size: 80%;
+    color: var(--text) !important;
+    background-color: var(--crust);
+    border-radius: 9999px;
+    border: none;
+    transition: all 0.05s;
+  }
 </style>
