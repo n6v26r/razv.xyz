@@ -153,8 +153,10 @@
     font-family: "LXGW WenKai Mono TC";
 
     &.selected {
-    font-weight: bold;
-    box-shadow: 0 0 0 calc(0.8 * var(--space-xxs)) var(--pink);
+      font-weight: bold;
+      box-shadow: 0 0 0 calc(0.8 * var(--space-xxs)) var(--pink);
+      margin-right: calc(1.8 * var(--space-xxs));
+      margin-left: calc(1.8 * var(--space-xxs));
 
       &:before {
         font-family: "Nerd Font";
