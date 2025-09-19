@@ -13,7 +13,6 @@
 	});
 </script>
 
-
 <svelte:head>
 	<script>
 		function updateTheme(document) {
@@ -50,6 +49,11 @@
 		min-height: 100%;
 	}
 
+	.page-wrapper {
+		will-change: transform;
+		transform: translateZ(0);
+	}
+
 	.page-content {
 		container-type: inline-size;
 
@@ -61,7 +65,7 @@
 		min-height: calc(100dvh - var(--height-nav));
 		margin-left: auto;
 		margin-right: auto;
-		-webkit-box-shadow: 0 0 10px var(--crust);
+		-webkit-box-shadow: 0 0 10px var(--cr0ust);
 		box-shadow: 0 0 10px var(--crust);
 		@media only screen and (max-width: 1500px) {
 			box-sizing: border-box;
