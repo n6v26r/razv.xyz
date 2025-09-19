@@ -28,9 +28,6 @@
 <div class="page-content">
 	{#if visible}
 		<div transition:fade|local>
-			<style lang="scss">
-				@use "../assets/typesetting.scss";
-			</style>
 			{#key data.currentPath}
 				<div
 					in:fly={{ y: -50, duration: 150, delay: 150 }}
