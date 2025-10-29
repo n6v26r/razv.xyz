@@ -137,6 +137,6 @@ Check out the [blog](/blog)!
 - <i class="fa-brands fa-signal-messenger"></i> <a href="https://signal.me/#eu/CY2eS_T0Q0uIvjGCZoxtip5SUjkgng3xRtGagXE5L-mF0YrzP1dNqrMY4AIBmgEM"> razv</a>
 - <i class="fa-brands fa-telegram"></i> <a href="https://t.me/n6v26r">n6v26r</a>
 - <i class="fa-brands fa-discord"></i> <a href="https://discord.com/users/820945163677335603">razv.islazy</a>
-- <i class="fa-solid fa-envelope"></i> <a href="mailto:n6v26r@gmail.com">n6v26r@gmail.com</a>
+- <i class="fa-solid fa-envelope"></i> <a href="mailto:razv@razv.xyz">razv@razv.xyz</a>
 <br/>
 - <i class="fa-brands fa-github"></i> <a href="https://github.com/n6v26r">n6v26r</a>
