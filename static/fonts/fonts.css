@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Fira Code";
+  src: url('/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf') format('woff2'),
+}
+
+@font-face {
+  font-family: "Victor Mono";
+  src: url('/fonts/Victor_Mono/VictorMono-Italic-VariableFont_wght.ttf') format('woff2'),
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url('/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('woff2'),
+}

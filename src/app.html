@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-theme="mocha">
+
+<head>
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<title>razv</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	%sveltekit.head%
+</head>
+
+<!-- Hello stranger from the internet! What are you doing here? -->
+<noscript>
+	<div class="nojs">
+		<div class="center">
+			<p>Sorry, this website needs js enabled to function.
+				<center>(╥﹏╥)</center>
+			</p>
+			<div />
+		</div>
+		<style>
+			.content {
+				display: none !important;
+			}
+
+			.center {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				background-color: var(--base);
+				padding: 1rem;
+				border-radius: var(--border-radius-large);
+				border: solid 1px var(--lavender);
+			}
+
+			.nojs {
+				display: flex;
+				justify-content: center;
+				height: 100dvh;
+				align-items: center;
+			}
+		</style>
+</noscript>
+
+<body data-sveltekit-preload-data="hover">
+	<div class="content" style="display: contents">%sveltekit.body%</div>
+</body>
+
+</html>
+
+<!-- Made with ❤️ by razv -->

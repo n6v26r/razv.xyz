@@ -1,0 +1,29 @@
+{
+  "routes": [
+    {
+      "src": "/fonts/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "dest": "/fonts/$1"
+    },
+    {
+      "src": "/_app/immutable/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "dest": "/_app/immutable/$1"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)/?$",
+      "status": 404,
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "dest": "/404"
+    }
+  ]
+}
