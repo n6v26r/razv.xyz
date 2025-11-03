@@ -32,7 +32,7 @@ People say NixOS is the great new thing so mabye I'll try that too in the future
 </Alert>
 
 ## GUI
-I manily use `i3` because it's tiny and cool, and I like that it uses <span style="font-family:'Nerd Font'">\<=</span>300mb of ram. When in need of wayland (on devices with weird resolutions), I use `sway` or `hyprland` if I'm feeling like a script kiddie. I would love to try `dwm` when I find enough time to set it up and rice it to oblivion.
+I manily use i3 because it's tiny and cool, and I like that it uses <span style="font-family:'Nerd Font'">\<=</span>300mb of ram. When in need of wayland (on devices with weird resolutions), I use sway or hyprland if I'm feeling like a script kiddie. I would love to try dwm when I find enough time to set it up and rice it to oblivion.
 
 Also KDE is trash. If you need a full DE (which you don't) use Gnome.
 
