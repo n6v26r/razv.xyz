@@ -4,9 +4,9 @@ export const trailingSlash = 'always';
 export async function load({ url }) {
   let path = url.pathname;
 
-  if (!path.endsWith('/')) {
-    path += '/';
-  }
+  // if (!path.endsWith('/')) {
+  //   path += '/';
+  // }
 
   return {
     currentPath: path,
