@@ -24,6 +24,14 @@
         "cache-control": "public, max-age=31536000, immutable"
       },
       "dest": "/404"
+    },
+    {
+      "src": "/(.*)/(.*?)",
+      "status": 404,
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "dest": "/404"
     }
   ]
 }
