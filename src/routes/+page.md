@@ -89,7 +89,7 @@ id="edge"
 <div>
 
 - competitive programming enjoyer 
-- favourite languages: C/C++ and Rust
+- favourite languages: C/C++ and Zig
 - big nerd :3 <sub>(no shit sherlock)</sub>
 - FOSS enthusiast
 
