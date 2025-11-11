@@ -7,8 +7,6 @@ date: 02/07/2025
   import {theme} from "$lib/stores/theme"
 
   let timeString = $state('');
-  let age = $state();
-  const birthday = new Date("2009-05-25T12:30:00+03:00");
   function updateDate(){
    const now = new Date();
 
@@ -21,7 +19,6 @@ date: 02/07/2025
           hour12: true
       };
       timeString = now.toLocaleTimeString('en-GB', options);
-      age = ((now.getTime() - birthday.getTime())/(1000*60*60*24*365.25)).toFixed(6);
    }
   setInterval(updateDate, 500);
   updateDate();
@@ -74,7 +71,7 @@ pre.cat {
 
 I'm <span class="myname">Răzvan</span>.
 
-I'm a {age} y/o guy from Romania who enjoys cool things, especially computers.
+I'm just a random guy who enjoys cool things, especially computers.
 
 Usernames: **razv** or **n6v26r**. 
 </div>
