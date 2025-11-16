@@ -14,9 +14,9 @@ You can find my dotfiles: [here](https://github.com/n6v26r/.dotfiles)
 
 ## Operating System
 
-My OS of choice is <i class="fa-brands fa-linux"></i>. I have tried in multiple distros but prefer <span style="font-family:'Nerd Font'">󰣇</span>&nbsp based, mainly for the os freedom and for the AUR.
+My OS of choice is <i class="fa-brands fa-linux"></i>. I have tried multiple distros but prefer <span style="font-family:'Nerd Font'">󰣇</span>&nbsp based, mainly for the freedom and the AUR.
 
-I've used Arch, EndeavourOS, Pop!_OS, and Debian, and ultimately settled on Manjaro.
+I've used Arch, EndeavourOS, Pop!_OS, and Debian, and I'm currently comfortable with Manjaro.
 People say NixOS is the great new thing so mabye I'll try that too in the future. 
 
 <Alert type="controversial">
@@ -25,7 +25,7 @@ People say NixOS is the great new thing so mabye I'll try that too in the future
 
  I know the main issue haters claim is that holding back updates, like Manjaro does, causes instability. In my experience that is not the case, even with heavy AUR use.
 
- Yes, the devs forgot to renew some security certificates ~~a lot of~~ a few times.
+ Yes, the devs forgot to renew some security certificates a ~~lot of~~ few times.
  Yes, they have done some stupid mistakes.
  Idc, the OS works for me :) And if some day it doesn't, I'll find another option then.
 
