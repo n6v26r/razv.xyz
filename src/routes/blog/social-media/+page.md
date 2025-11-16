@@ -2,6 +2,7 @@
 title: Social media sucks
 desc: "Rant about manipulative behemoths that control us through dopamine addiction"
 tags: [rant]
+banner: true
 ---
 
 <script>
