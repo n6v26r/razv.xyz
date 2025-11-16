@@ -1,7 +1,7 @@
 import { join, dirname } from "path"
 import { fileURLToPath } from "url";
 import { mdsvex } from 'mdsvex';
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-vercel';
 // import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import remarkFootnotes from 'remark-footnotes';
@@ -26,9 +26,6 @@ const config = {
 		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: null
 		}),
 	},
 	extensions: ['.svelte', '.svx', '.md'],
