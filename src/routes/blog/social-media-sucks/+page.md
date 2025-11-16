@@ -20,7 +20,7 @@ The state of online platforms today is saddening at best. They have shifted away
 
 Instead, we're being cluelessly manipulated by increasingly smarter algorithms created to do one thing: generate engagement at any cost. You are no longer the consumer; you are the product!
 
-Don't get me wrong, we manipulate each other every day! By sharing opinions and ideas, we persuade the ones around us. That's a core part of being human. However, this does become an ethical issue when it's not done transparently and reciprocally by us (people), but it's algorithms (and, by extension, bad rich people[^2]) doing it.
+Don't get me wrong, we manipulate each other every day! By sharing opinions and ideas, we persuade the ones around us. That's a core part of being human. However, this does become an ethical issue when it's not done transparently and reciprocally by us (people), but it's algorithms (and, by extension, the rich and evil[^2]) doing it.
 
 > A computer could more accurately predict the subject's personality than a work colleague by analyzing just ten Likes; more than a friend or a cohabitant with 70, a family member with 150, and a spouse with 300 Likes.
 > 
