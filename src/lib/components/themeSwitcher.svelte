@@ -2,7 +2,7 @@
 <script lang="ts">
   import type { AccentName, FlavorName } from "@catppuccin/palette";
   import { browser } from "$app/environment";
-  import { scale } from "svelte/transition";
+  import { fly, scale, slide } from "svelte/transition";
   import { clickOutside } from "$lib/clickoutside";
   import { systemThemePreference } from "$lib/stores/theme";
   type Theme = FlavorName | "system";
@@ -27,7 +27,7 @@
   );
 
   let themeMenuDropdownShow = $state(false);
-  const themeMenuDropdownAnimDur = 150;
+  const themeMenuDropdownAnimDur = 300;
 
   function _setTheme(selectedTheme: Theme) {
     document.documentElement.setAttribute("data-theme", selectedTheme);
@@ -73,7 +73,12 @@
 {#if themeMenuDropdownShow}
   <div
     class="theme-menu-dropdown"
-    transition:scale={{ duration: themeMenuDropdownAnimDur }}
+    transition:fly={{
+      duration: themeMenuDropdownAnimDur,
+      x: 10,
+      y: 10,
+      opacity: 0,
+    }}
     use:clickOutside={{
       callback: () => (themeMenuDropdownShow = false),
       ignore: [themeMenuBtn],
@@ -149,6 +154,8 @@
   }
 
   .theme-menu-dropdown {
+    will-change: transform;
+    transform: translateZ(0);
     overflow: hidden;
     z-index: 10;
     position: absolute;
