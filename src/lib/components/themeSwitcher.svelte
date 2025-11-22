@@ -27,7 +27,7 @@
   );
 
   let themeMenuDropdownShow = $state(false);
-  const themeMenuDropdownAnimDur = 300;
+  const themeMenuDropdownAnimDur = 150;
 
   function _setTheme(selectedTheme: Theme) {
     document.documentElement.setAttribute("data-theme", selectedTheme);
@@ -75,7 +75,7 @@
     class="theme-menu-dropdown"
     transition:fly={{
       duration: themeMenuDropdownAnimDur,
-      x: 10,
+      x: -10,
       y: 10,
       opacity: 0,
     }}
