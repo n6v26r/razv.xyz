@@ -4,7 +4,7 @@
     ["/blog", "blog"],
   ];
   import { page } from "$app/state";
-  import ThemeSwitcher from "./themeSwitcher.svelte";
+  import ThemeSwitcher from "./ThemeSwitcher.svelte";
 </script>
 
 <nav>

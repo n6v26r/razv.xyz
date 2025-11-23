@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import { theme } from "$lib/stores/theme";
+  import ThemedImage from "$lib/components/ThemedImage.svelte";
 
   export let data;
   export let title;
@@ -15,11 +15,7 @@
 <header>
   <!-- svelte-ignore a11y_img_redundant_alt -->
   {#if banner}
-    <img
-      class="post-image"
-      alt="image"
-      src={data.currentPath + "/image_catppuccin-" + $theme}
-    />
+    <ThemedImage name="image" path={data.currentPath} class="post-image" />
   {/if}
   <h1 class="post-title">{title}</h1>
   {#if date}

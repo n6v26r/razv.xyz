@@ -1,0 +1,10 @@
+<script>
+  import { page } from "$app/state";
+  import { theme } from "$lib/stores/theme";
+
+  export let name;
+  export let path = page.url.pathname;
+  export let ext = "";
+</script>
+
+<img src="{path}/{name}_catppuccin-{$theme}{ext}" {...$$restProps} alt={name} />

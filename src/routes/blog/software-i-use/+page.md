@@ -5,7 +5,7 @@ tags: [linux, software]
 ---
 
 <script lang="ts">
-import Alert from "$lib/components/alert.svelte"
+import Alert from "$lib/components/Alert.svelte"
 </script>
 
 <p align="center"><sup>Now every time someone asks me about my workflow I can refer them to this.</sup></p>

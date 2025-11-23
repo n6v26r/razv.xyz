@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import "../app.scss";
-	import Navbar from "$lib/components/navbar.svelte";
+	import Navbar from "$lib/components/Navbar.svelte";
 	import "@fortawesome/fontawesome-free/css/all.min.css";
 	import { fly, fade } from "svelte/transition";
 

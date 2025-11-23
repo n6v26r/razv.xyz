@@ -6,8 +6,7 @@ banner: true
 ---
 
 <script>
-import { page } from "$app/state"
-import { theme } from "$lib/stores/theme"
+  import ThemedImage from '$lib/components/ThemedImage.svelte';
 </script>
 
 <p align="center"><sup>If you ask for my Instagram and you receive this link, you're in the right place.</sup></p>
@@ -63,7 +62,7 @@ This leaves us with the third option, which can work but only with a dedicated c
 
 So what do we do? How do we dethrone the money-hungry overlords of our online social existence? 
 
-<img src={page.url.pathname + "/thereisnothingwecando_catppuccin-"+$theme}/>
+<ThemedImage name="thereisnothingwecando"/>
 
 In a world where our own governments are trying to spy on us, where even the EU pushes repeatedly for breaking communication encryption (and calls this idiocy "child protection"), and where it seems like GDPR is becoming less of a protection for the population and more of a **slight** annoyance for big data hoarders[^6], we can either hope that they will sabotage themselves (which they ironically seem to be doing a lot of lately) or maybe start seriously considering digital autonomy.
 
