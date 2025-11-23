@@ -40,7 +40,7 @@
     margin-bottom: 0;
   }
 
-  .post-image {
+  :global(.post-image) {
     margin-top: 5%;
   }
 

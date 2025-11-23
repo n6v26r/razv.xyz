@@ -7,4 +7,4 @@
   export let ext = "";
 </script>
 
-<img src="{path}/{name}_catppuccin-{$theme}{ext}" {...$$restProps} alt={name} />
+<img src="{path}/{name}_catppuccin-{$theme}{ext}" alt={name} {...$$restProps}/>
