@@ -64,7 +64,13 @@ So what do we do? How do we dethrone the money-hungry overlords of our online so
 
 <ThemedImage name="thereisnothingwecando"/>
 
-In a world where our own governments are trying to spy on us, where even the EU pushes repeatedly for breaking communication encryption (and calls this idiocy "child protection"), and where it seems like GDPR is becoming less of a protection for the population and more of a **slight** annoyance for big data hoarders[^6], we can either hope that they will sabotage themselves (which they ironically seem to be doing a lot of lately) or maybe start seriously considering digital autonomy.
+We live in a world where our own governments are trying to spy on us. Even the EU continues to promote proposals that would weaken secure communication. (and is calling this idiocy "child protection") GDPR is becoming less of a protection for the citizens' privacy and more of a **slight** annoyance for data hoarders.
+
+Google's slogan used to be "Don't be evil."
+In 2015 they replaced it with "Do the right thing."
+The right thing for whom?
+
+Given the current state of things, we can either hope that our manipulators will sabotage themselves (which they ironically seem to be doing a lot of lately) or start seriously considering our digital autonomy.
 
 [^1]: Wednesday (TV Series)
 [^2]: Corporations
