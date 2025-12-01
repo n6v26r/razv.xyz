@@ -35,12 +35,8 @@
 
 <div style="padding-bottom:20px;">
   {#each postsMatchingFilters as post (post.slug)}
-    <div animate:flip={{ duration: 150 }}>
-      <div
-        class="post-details"
-        in:scale={{ duration: 150 }}
-        out:scale={{ duration: 150 }}
-      >
+    <div animate:flip={{ duration: 200 }} in:scale>
+      <div class="post-details">
         <div class="row">
           <a class="post-title" href={`/blog/${post.slug}`}
             >{post.metadata.title}</a
