@@ -15,7 +15,7 @@
 <header>
   <!-- svelte-ignore a11y_img_redundant_alt -->
   {#if banner}
-    <ThemedImage name="image" path={data.currentPath} preload={true} class="post-image" />
+    <ThemedImage name="image" path={data.currentPath} class="post-image" />
   {/if}
   <h1 class="post-title">{title}</h1>
   {#if date}
