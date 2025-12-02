@@ -165,7 +165,7 @@
     right: 1%;
 
     border-radius: var(--border-radius-normal);
-    border: var(--border-smallish) solid var(--blue);
+    border: var(--border-smallish) solid var(--accent);
     transition: all 0.1s;
     margin: 0;
     background-color: var(--base);
@@ -187,7 +187,8 @@
     width: 100%;
 
     &:hover {
-      background-color: var(--blue);
+      background-color: var(--accent);
+      color: var(--inverted-text)
     }
 
     @media only screen and (max-width: 900px) {
