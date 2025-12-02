@@ -49,10 +49,6 @@ span.myname{
   }
 }
 
-:is(h2, h3, h4, h5, h6) {
-  cursor: auto;
-}
-
 pre.cat {
   text-size-adjust: none;
   -ms-text-size-adjust: none;

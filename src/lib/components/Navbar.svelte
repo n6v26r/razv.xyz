@@ -2,6 +2,7 @@
   let pages = [
     ["/", "home"],
     ["/blog", "blog"],
+    ["/microblog", "µ"],
   ];
   import { page } from "$app/state";
   import ThemeSwitcher from "./ThemeSwitcher.svelte";
@@ -12,8 +13,7 @@
     {#each pages as [link, title]}
       <a
         href={link}
-        class:active={link ===
-          "/" + page.url.pathname.split("/")[1]}>{title}</a
+        class:active={link === "/" + page.url.pathname.split("/")[1]}>{title}</a
       >
     {/each}
   </div>
@@ -29,11 +29,11 @@
   nav {
     background-color: var(--crust);
     position: relative;
-    // overflow: hidden;
     margin: 0;
     vertical-align: middle;
     height: var(--height-nav);
     margin: 0;
+    border-bottom: 2px dashed var(--surface2);
 
     .navbar-pages {
       font-family: "Fira Code";
@@ -47,15 +47,14 @@
       height: 100%;
 
       a {
-        transition: color 0.5s;
+        transition: filter 0.5s;
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
         position: relative;
 
-        background-color: var(--crust);
-        color: var(--blue);
+        color: var(--accent);
         stroke: none;
         border: none;
 
@@ -66,7 +65,7 @@
 
       @media (pointer: fine) {
         a:not(.active):hover {
-          color: var(--lavender);
+          filter: brightness(135%);
         }
       }
 

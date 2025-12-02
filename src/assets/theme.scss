@@ -6,18 +6,22 @@ $theme-data: (
   "latte": ("scheme": light,
     "inverted-text": var(--base),
     "selection-color": var(--blue),
+    "accent": var(--mauve),
   ),
   "macchiato": ("scheme": dark,
     "inverted-text": var(--crust),
     "selection-color": var(--mauve),
+    "accent": var(--pink),
   ),
   "frappe": ("scheme": dark,
     "inverted-text": var(--crust),
     "selection-color": var(--mauve),
+    "accent": var(--peach),
   ),
   "mocha": ("scheme": dark,
     "inverted-text": var(--crust),
     "selection-color": var(--mauve),
+    "accent": var(--green),
   ),
 );
 
@@ -27,7 +31,8 @@ $theme-data: (
   }
 
   --inverted-text: #{map.get(map.get($theme-data, $flavor), "inverted-text")};
-  --selection-color: #{map.get(map.get($theme-data, $flavor), "selection-color")};
+  --selection-color: #{map.get(map.get($theme-data, $flavor), "accent")};
+  --accent: #{map.get(map.get($theme-data, $flavor), "accent")};
 }
 
 :where([data-theme="system"]) {

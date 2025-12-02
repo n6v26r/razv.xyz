@@ -1,6 +1,6 @@
 <!--- Credit to the catppuccin website for the themeSwitcher mechanism theme css. --->
 <script lang="ts">
-  import type { AccentName, FlavorName } from "@catppuccin/palette";
+  import type { FlavorName } from "@catppuccin/palette";
   import { browser } from "$app/environment";
   import { fly, scale, slide } from "svelte/transition";
   import { clickOutside } from "$lib/clickoutside";
@@ -11,13 +11,12 @@
     id: Theme;
     name: string;
     emoji: string;
-    accent: AccentName;
   }[] = [
-    { id: "system", name: "System", emoji: "🖥️", accent: "blue" },
-    { id: "latte", name: "Latte", emoji: "🌻", accent: "yellow" },
-    { id: "frappe", name: "Frappé", emoji: "🪴", accent: "peach" },
-    { id: "macchiato", name: "Macchiato", emoji: "🌺", accent: "pink" },
-    { id: "mocha", name: "Mocha", emoji: "🌿", accent: "green" },
+    { id: "system", name: "System", emoji: "🖥️" },
+    { id: "latte", name: "Latte", emoji: "🌻" },
+    { id: "frappe", name: "Frappé", emoji: "🪴" },
+    { id: "macchiato", name: "Macchiato", emoji: "🌺" },
+    { id: "mocha", name: "Mocha", emoji: "🌿" },
   ];
 
   let currentTheme = $state(
@@ -67,7 +66,7 @@
       themeMenuDropdownShow = !themeMenuDropdownShow;
     }}
   >
-    <i class="fa-solid fa-brush"></i>
+    <i style="color:var(--accent);" class="fa-solid fa-brush"></i>
   </button>
 </div>
 {#if themeMenuDropdownShow}

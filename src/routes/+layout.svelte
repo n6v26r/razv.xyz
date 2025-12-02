@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+	import { onMount, tick } from "svelte";
+	import { useCoolHeadings } from "$lib/coolheadings";
 	import "../app.scss";
 	import Navbar from "$lib/components/Navbar.svelte";
 	import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -8,8 +9,10 @@
 	export let data;
 	let visible = false;
 
-	onMount(() => {
+	onMount(async () => {
 		visible = true;
+		await tick();
+		useCoolHeadings();
 	});
 </script>
 

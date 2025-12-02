@@ -1,13 +1,6 @@
 <script>
-  import "../../assets/prism.scss";
-  import "katex/dist/katex.min.css";
-
-  import { useCoolHeadings } from "$lib/coolheadings";
-  import { onMount } from "svelte";
-
-  onMount(() => {
-    useCoolHeadings();
-  });
+	import "../../assets/prism.scss";
+	import "katex/dist/katex.min.css";
 </script>
 
 <svelte:head>
@@ -28,5 +21,5 @@
 </svelte:head>
 
 <div class="page-wrapper">
-  <slot />
+	<slot />
 </div>
