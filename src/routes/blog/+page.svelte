@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { scale } from "svelte/transition";
+  import { fly, scale } from "svelte/transition";
   import { flip } from "svelte/animate";
   import {
     initTagState,
@@ -35,30 +35,26 @@
 
 <div style="padding-bottom:20px;">
   {#each postsMatchingFilters as post (post.slug)}
-    <div animate:flip={{ duration: 200 }} in:scale>
-      <div class="post-details">
-        <div class="row">
-          <a class="post-title" href={`/blog/${post.slug}`}
-            >{post.metadata.title}</a
-          >
-          {#if post.metadata.tags}
-            <span class="tag-list">
-              <span style="font-family:'Nerd Font'; padding-right:0.5em"
-                >
-              </span>
-              {#each post.metadata.tags as tag}
-                <div class="tag">{tag}</div>
-              {/each}
-            </span>
-          {/if}
-        </div>
-        {#if post.metadata.date}
-          <div class="post-date">{post.metadata.date}</div>
-        {/if}
-        {#if post.metadata.desc}
-          <div class="desc">{post.metadata.desc}</div>
+    <div class="post-details">
+      <div class="row">
+        <a class="post-title" href={`/blog/${post.slug}`}
+          >{post.metadata.title}</a
+        >
+        {#if post.metadata.tags}
+          <span class="tag-list">
+            <span style="font-family:'Nerd Font'; padding-right:0.5em"> </span>
+            {#each post.metadata.tags as tag}
+              <div class="tag">{tag}</div>
+            {/each}
+          </span>
         {/if}
       </div>
+      {#if post.metadata.date}
+        <div class="post-date">{post.metadata.date}</div>
+      {/if}
+      {#if post.metadata.desc}
+        <div class="desc">{post.metadata.desc}</div>
+      {/if}
     </div>
   {/each}
   {#if !postsMatchingFilters.length}
