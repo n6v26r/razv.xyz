@@ -62,6 +62,14 @@
 
   scrollbar-color: var(--accent) var(--mantle);
   scrollbar-width: thin;
+
+  &:focus-visible {
+    outline: 1px solid var(--accent);
+  }
+
+  &:visited {
+    text-decoration: none;
+  }
 }
 
 :root {
