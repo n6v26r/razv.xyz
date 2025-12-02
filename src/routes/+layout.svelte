@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { onMount, tick } from "svelte";
 	import { useCoolHeadings } from "$lib/coolheadings";
+	import { afterNavigate } from "$app/navigation";
+
 	import "../app.scss";
-	import Navbar from "$lib/components/Navbar.svelte";
 	import "@fortawesome/fontawesome-free/css/all.min.css";
+	import Navbar from "$lib/components/Navbar.svelte";
 	import { fly, fade } from "svelte/transition";
 
 	export let data;
@@ -12,6 +14,10 @@
 	onMount(async () => {
 		visible = true;
 		await tick();
+		useCoolHeadings();
+	});
+
+	afterNavigate(async () => {
 		useCoolHeadings();
 	});
 </script>
