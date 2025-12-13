@@ -39,7 +39,7 @@
   </div>
 {/if}
 
-<!-- svelte-ignore css_unused_selector --> 
+<!-- svelte-ignore css_unused_selector -->
 <style lang="scss">
   @use "../../routes/blog/blogposts.css";
 
@@ -48,14 +48,14 @@
 
     &.selected {
       font-weight: bold;
-      box-shadow: 0 0 0 calc(0.8 * var(--space-xxs)) var(--pink);
+      box-shadow: 0 0 0 calc(0.8 * var(--space-xxs)) var(--accent);
       margin-right: calc(1.8 * var(--space-xxs));
       margin-left: calc(1.8 * var(--space-xxs));
 
       &:before {
         font-family: "Nerd Font";
         content: " ";
-        color: var(--pink);
+        color: var(--accent);
       }
     }
 
