@@ -3,25 +3,25 @@
 // Medium, Bold
 @font-face {
   font-family: "Fira Code";
-  src: url('/fonts/Fira_Code/FiraCode-VariableFont_wght.woff2') format('woff2');
+  src: url('/fonts/Fira_Code/FiraCode-VariableFont_wght-subset.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
   font-family: "Victor Mono";
-  src: url('/fonts/Victor_Mono/VictorMono-Italic-VariableFont_wght.woff2') format('woff2');
+  src: url('/fonts/Victor_Mono/VictorMono-Italic-VariableFont_wght-subset.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto/Roboto-VariableFont_wdth,wght.woff2') format('woff2');
+  src: url('/fonts/Roboto/Roboto-VariableFont_wdth,wght-subset.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
   font-family: "Nerd Font";
-  src: url('/fonts/Fira_Code_NF/FiraCodeNerdFont-Medium.woff2') format('woff2');
+  src: url('/fonts/Fira_Code_NF/FiraCodeNerdFont-Medium-subset.woff2') format('woff2');
   font-display: swap;
   font-weight: normal;
   font-style: normal;
@@ -29,7 +29,7 @@
 
 @font-face {
   font-family: "Nerd Font";
-  src: url('/fonts/Fira_Code_NF/FiraCodeNerdFont-Bold.woff2') format('woff2');
+  src: url('/fonts/Fira_Code_NF/FiraCodeNerdFont-Bold-subset.woff2') format('woff2');
   font-display: swap;
   font-weight: bold;
   font-style: normal;
@@ -37,7 +37,7 @@
 
 @font-face {
   font-family: "Nerd Font";
-  src: url('/fonts/Victor_Mono_NF/VictorMonoNerdFontMono-MediumItalic.woff2') format('woff2');
+  src: url('/fonts/Victor_Mono_NF/VictorMonoNerdFontMono-MediumItalic-subset.woff2') format('woff2');
   font-display: swap;
   font-weight: normal;
   font-style: italic;
@@ -45,14 +45,14 @@
 
 @font-face {
   font-family: "Lexend";
-  src: url('/fonts/Lexend/Lexend-VariableFont_wght.woff2') format('woff2');
+  src: url('/fonts/Lexend/Lexend-VariableFont_wght-subset.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
   font-family: "LXGW WenKai Mono TC";
   src: url('/fonts/LXGW_WenKai_Mono_TC/LXGWWenKaiMonoTC-Regular-subset.woff2') format('woff2');
-  font-display: block;
+  font-display: swap;
 }
 
 /* @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=block'); */
@@ -78,6 +78,7 @@
   --border-med: 3px;
   --border-big: 5px;
 
+  --border-radius-small: 3px;
   --border-radius-normal: 6px;
   --border-radius-large: 12px;
 
@@ -108,6 +109,10 @@
   @media (min-width: 1201px) {
     font-size: 18px;
   }
+
+  --max-width-content: 1500px;
+  --padding-page-content: 5%;
+  --width-page-content-def: 50%;
 }
 
 em {
@@ -120,9 +125,9 @@ hr {
 }
 
 html {
+  background-color: var(--base);
   background:
     repeating-linear-gradient(-45deg, var(--base), var(--crust) 50px, var(--base) 50px);
-
   background-size: 10000px 10000px;
   color: var(--text);
   scroll-behavior: smooth;
@@ -130,6 +135,7 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: auto;
 }
 
 body {
@@ -138,6 +144,7 @@ body {
   color: var(--text);
   background-color: transparent;
   height: 100%;
+  overflow: auto;
 }
 
 button {
@@ -150,6 +157,7 @@ button {
 }
 
 a {
+  display: inline-block;
   font-weight: bold;
   color: var(--accent);
   text-decoration: underline;
@@ -223,10 +231,12 @@ h1 {
 }
 
 pre[class^="language-"] {
+  border-radius: var(--border-radius-normal);
   border-left: var(--border-big) solid var(--accent) !important;
   margin-left: 0 !important;
   background-color: var(--surface0);
-  display: box;
+
+  overflow: hidden;
 
   div.language-label {
     background-color: var(--surface1);
@@ -236,7 +246,11 @@ pre[class^="language-"] {
 
 code {
   font-family: "Nerd Font", monospace;
-  background-color: var(--surface0);
+  background-color: var(--mantle);
+}
+
+div.entry code {
+  background-color: var(--crust);
 }
 
 code:not([class^="language-"]) {

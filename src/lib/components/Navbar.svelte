@@ -8,19 +8,28 @@
   import ThemeSwitcher from "./ThemeSwitcher.svelte";
 </script>
 
-<nav>
-  <div class="navbar-pages">
-    {#each pages as [link, title]}
-      <a
-        href={link}
-        class:active={link === "/" + page.url.pathname.split("/")[1]}>{title}</a
-      >
-    {/each}
-  </div>
-  <ThemeSwitcher />
-</nav>
+<div class="nav-container">
+  <nav>
+    <div class="navbar-pages">
+      {#each pages as [link, title]}
+        <a
+          href={link}
+          class:active={link === "/" + page.url.pathname.split("/")[1]}
+          >{title}</a
+        >
+      {/each}
+    </div>
+    <ThemeSwitcher />
+  </nav>
+</div>
 
 <style lang="scss">
+  .nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .navbar-pages {
     display: flex;
     gap: var(--space-nav);
@@ -34,6 +43,16 @@
     height: var(--height-nav);
     margin: 0;
     border-bottom: 2px dashed var(--surface2);
+
+    width: 100%;
+    max-width: calc(var(--max-width-content) + 2 * var(--padding-page-content));
+
+    @media only screen and (min-width: 1501px) {
+      width: calc(
+        var(--width-page-content-def) + 2 * var(--padding-page-content));
+        // border-left: 2px dashed var(--surface2);
+        // border-right: 2px dashed var(--surface2);
+    }
 
     .navbar-pages {
       font-family: "Fira Code";

@@ -1,5 +1,11 @@
 <script lang="ts">
-  type Alert = "note" | "tip" | "important" | "warning" | "caution" | "controversial";
+  type Alert =
+    | "note"
+    | "tip"
+    | "important"
+    | "warning"
+    | "caution"
+    | "controversial";
   type ContentType = "quote" | "label";
   type DisplayType = "block" | "inline";
   export let type: Alert = "note";
@@ -34,18 +40,17 @@
     {#if display === "block"}
       <br />
     {/if}
+    {#if display === "inline"}
+      &nbsp;
+    {/if}
     <slot></slot>
   </blockquote>
 {/if}
 {#if content === "label"}
   <span class={type}>{@html getLabel(type)}</span>
-  {#if display === "block"}
-    <br />
-  {/if}
 {/if}
 
 <style>
-
   blockquote.note {
     border-color: var(--blue);
   }
@@ -65,7 +70,7 @@
   blockquote.caution {
     border-color: var(--red);
   }
-  
+
   blockquote.controversial {
     border-color: var(--maroon);
   }

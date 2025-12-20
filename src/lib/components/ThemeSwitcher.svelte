@@ -48,6 +48,16 @@
     }
 
     setTimeout(() => {
+      const r = themeMenuBtn.getBoundingClientRect();
+
+      document.documentElement.style.setProperty(
+        "--vt-x",
+        `${((r.left + r.width / 2) / innerWidth) * 100}%`,
+      );
+      document.documentElement.style.setProperty(
+        "--vt-y",
+        `${((r.top + r.height / 2) / innerHeight) * 100}%`,
+      );
       document.startViewTransition(async () => {
         _setTheme(selectedTheme);
       });
@@ -97,6 +107,11 @@
 {/if}
 
 <style lang="scss">
+  :root {
+    --vt-x: 100%;
+    --vt-y: 0%;
+  }
+
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -111,11 +126,11 @@
 
   @keyframes move-out {
     0% {
-      clip-path: circle(150% at 100% 0%);
+      clip-path: circle(150% at var(--vt-x) var(--vt-y));
     }
 
     100% {
-      clip-path: circle(0% at 100% 0%);
+      clip-path: circle(0% at var(--vt-x) var(--vt-y));
     }
   }
 
@@ -160,7 +175,6 @@
     position: absolute;
     text-align: left;
     display: grid;
-    align-items: left;
     top: 100%;
     right: 1%;
 
@@ -188,7 +202,7 @@
 
     &:hover {
       background-color: var(--accent);
-      color: var(--inverted-text)
+      color: var(--inverted-text);
     }
 
     @media only screen and (max-width: 900px) {

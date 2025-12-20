@@ -34,13 +34,13 @@ Not to mention the recent trend of "AI"[^4] features.
 >
 > – Society
 
-I would be a hypocrite if I didn't try to minimize the presence of such apps in my life. Unfortunately, these days, having accounts on certain platforms is almost taken for granted. Some apps have straight-up become an unwritten requirement. Try telling a person in Eastern Europe they can't contact you on WhatsApp because you don't have it... **by choice**.
+I would be a hypocrite if I didn't try to minimize the presence of such apps in my life. Unfortunately, these days, having accounts on certain platforms is a social requirement. Try telling a person in Eastern Europe they can't contact you on WhatsApp because you don't have it... **by choice**.
 
-I am unfortunately no saint and still dependent on some of those evil apps for different aspects of my life. But I am trying to ditch as many of them as possible (perhaps replacing them with good alternatives), and I can only strongly encourage you to do the same.
+I am unfortunately no saint and still dependent on some of those evil apps for my online life. But I am trying to ditch as many of them as possible (perhaps replacing them with good alternatives), and I can only strongly encourage you to do the same.
 
 ## Some alternatives
 
-There are exceptions to every rule. Unfortunately, nobody is "crazy enough"[^5] to use those. :[
+There are exceptions to every rule. Unfortunately, nobody is "crazy enough"[^5] to use them. :[
 
 Some of my favorites include:
 - Mastodon, an open-source Twitter (X) alternative. Out of all the good platforms I've seen so far, I think this one has the most potential to actually go mainstream. 

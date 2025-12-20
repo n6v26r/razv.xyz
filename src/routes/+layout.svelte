@@ -67,7 +67,7 @@
 		background-color: var(--base);
 		margin-top: 0;
 		margin-bottom: 0;
-		max-width: 1500px;
+		max-width: var(--max-width-content);
 		min-height: calc(100dvh - var(--height-nav));
 		margin-left: auto;
 		margin-right: auto;
@@ -97,9 +97,9 @@
 		}
 		@media only screen and (min-width: 1501px) {
 			box-sizing: content-box;
-			width: 50%;
-			padding-left: 5%;
-			padding-right: 5%;
+			width: var(--width-page-content-def);
+			padding-left: var(--padding-page-content);
+			padding-right: var(--padding-page-content);
 		}
 	}
 </style>
