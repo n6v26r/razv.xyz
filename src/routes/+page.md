@@ -5,6 +5,7 @@ date: 02/07/2025
 
 <script lang="ts">
   import {theme} from "$lib/stores/theme"
+  import NowPlaying from "$lib/components/NowPlaying.svelte"
 
   let timeString = $state('');
   function updateDate(){
@@ -26,10 +27,10 @@ date: 02/07/2025
 </script>
 
 <!-- svelte-ignore css_unused_selector -->
-<style>
+<style lang="scss">
 
 span.myname{
-  color: var(--red);
+  color: var(--highlight);
   font-weight: bold;
 }
 
@@ -57,6 +58,13 @@ pre.cat {
 
   font-family: "LXGW WenKai Mono TC", monospace;
   font-weight: bold;
+}
+
+.now-playing-container {
+  display: inline;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
 }
 
 </style>
@@ -109,8 +117,8 @@ Check out the [blog](/blog)!
 ### Some random facts
 
 - Right now it's <code>{timeString}</code> for me
-- I tend to use (too) many parantheses
 - I hate frontend development
+- Music playing: <div class="now-playing-container"><NowPlaying/></div>
 
 </div>
 <div>

@@ -113,6 +113,8 @@
   --max-width-content: 1500px;
   --padding-page-content: 5%;
   --width-page-content-def: 50%;
+
+  --screen-width-full: 1500px;
 }
 
 em {
@@ -257,7 +259,8 @@ code:not([class^="language-"]) {
 
   &:before,
   &:after {
-    content: '`'
+    content: '`';
+    color: var(--subtext0);
   }
 }
 

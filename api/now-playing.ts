@@ -2,10 +2,10 @@ export const config = {
   runtime: 'edge',
 };
 
-export default async function handler(_: Request) {
-  const LASTFM_API_KEY = process.env.LASTFM_API_KEY;
-  const LASTFM_USER = process.env.LASTFM_USER;
+const LASTFM_API_KEY = process.env.LASTFM_API_KEY;
+const LASTFM_USER = process.env.LASTFM_USER;
 
+export default async function handler(_: Request) {
   if (!LASTFM_API_KEY || !LASTFM_USER) {
     return new Response(JSON.stringify({ error: 'Missing Last.fm credentials' }), {
       status: 500,
