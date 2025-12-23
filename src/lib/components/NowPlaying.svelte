@@ -34,6 +34,25 @@
     marquee.style.setProperty("--duration", `${duration}s`);
   }
 
+  function setupFetchInterval() {
+    let interval = setInterval(async () => {
+      if (document.visibilityState === "visible") {
+        await fetchNowPlaying();
+      }
+    }, 30_000);
+
+    document.addEventListener("visibilitychange", async () => {
+      if (document.visibilityState === "visible") {
+        if ($errorStore !== null) {
+          await fetchNowPlaying();
+        }
+        errorStore.set(null);
+      }
+    });
+
+    return () => clearInterval(interval);
+  }
+
   onMount(() => {
     updateSpeed();
 
@@ -43,9 +62,9 @@
       fetchNowPlaying();
     }
 
-    const interval = setInterval(fetchNowPlaying, 30_000);
+    const cleanup = setupFetchInterval();
     return () => {
-      clearInterval(interval);
+      cleanup();
       ro?.disconnect();
     };
   });

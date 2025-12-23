@@ -48,7 +48,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding: none !important;
+    padding: 0 !important;
   }
 
   .post-date {

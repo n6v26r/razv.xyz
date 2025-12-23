@@ -1,3 +1,4 @@
+import { page } from "$app/state";
 import { writable } from "svelte/store";
 
 export interface Track {
@@ -23,6 +24,8 @@ export const loadingStore = writable<boolean>(true);
 let initalLoad: boolean = true;
 
 export async function fetchNowPlaying() {
+  if (page.url.pathname !== "/") return;
+
   if (initalLoad) loadingStore.set(true);
   errorStore.set(null);
 
