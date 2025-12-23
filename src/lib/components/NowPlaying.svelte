@@ -202,6 +202,25 @@
     overflow: hidden;
     white-space: nowrap;
 
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      var(--crust) 5%,
+      var(--crust) 95%,
+      transparent
+    );
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      var(--crust) 5%,
+      var(--crust) 95%,
+      transparent
+    );
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+
     &:hover .marquee {
       animation-play-state: paused;
     }
