@@ -205,8 +205,8 @@
     -webkit-mask-image: linear-gradient(
       to right,
       transparent,
-      var(--crust) 5%,
-      var(--crust) 95%,
+      var(--crust) 3%,
+      var(--crust) 97%,
       transparent
     );
     -webkit-mask-repeat: no-repeat;
@@ -214,8 +214,8 @@
     mask-image: linear-gradient(
       to right,
       transparent,
-      var(--crust) 5%,
-      var(--crust) 95%,
+      var(--crust) 3%,
+      var(--crust) 97%,
       transparent
     );
     mask-repeat: no-repeat;
