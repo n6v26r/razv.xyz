@@ -2,7 +2,7 @@
   let pages = [
     ["/", "home"],
     ["/blog", "blog"],
-    ["/microblog", "µ"],
+    // ["/microblog", "µ"],
   ];
   import { page } from "$app/state";
   import ThemeSwitcher from "./ThemeSwitcher.svelte";
