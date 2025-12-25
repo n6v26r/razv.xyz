@@ -60,6 +60,35 @@ pre.cat {
   font-weight: bold;
 }
 
+a.webring, a.webring-arrow {
+  text-decoration: none !important;
+  &:after {
+    content: "" !important;
+  }
+}
+a.webring {
+  text-decoration: none;
+  color: var(--text);
+  &:after {
+    content: "";
+  }
+}
+
+a.ctp-webring {
+  color: var(--inverted-text);
+  background-image: var(--gradient);
+  background-size: 200% 200%;
+  border-radius: var(--border-radius-normal);
+  padding: 4px;
+
+  transition: background-position 1s ease;
+
+  &:hover{
+    text-shadow: 0px 0px 0px;
+    background-position: 100% 50%;
+  }
+}
+
 .now-playing-container {
   display: inline;
   overflow: hidden;
@@ -141,3 +170,12 @@ Check out the [blog](/blog)!
 - <i class="fa-solid fa-envelope"></i> <a href="mailto:razv@razv.xyz">razv@razv.xyz</a>
 <br/>
 - <i class="fa-brands fa-github"></i> <a href="https://github.com/n6v26r">n6v26r</a>
+
+<br/>
+<p align=center>
+<a class="webring-arrow" href="https://ctp-webr.in/razv/previous"><i class="fa-solid fa-arrow-left"></i></a>
+<a class="webring ctp-webring" href="https://ctp-webr.ing">catppuccin</a>
+<a class="webring-arrow" href="https://ctp-webr.in/razv/next"><i class="fa-solid fa-arrow-right"></i></a>
+<br>
+(pending)
+</p>
