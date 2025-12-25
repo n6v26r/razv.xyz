@@ -17,20 +17,17 @@
   let flakes: Flake[] = [];
   let raf: number | null = null;
   let running = true;
-  const dpr = window.devicePixelRatio || 1;
-
-  const COUNT = 10;
 
   let snowColor = "rgba(255,255,255,0.85)";
   let themeObserver: MutationObserver | null = null;
 
+  const dpr = browser ? window.devicePixelRatio || 1 : 1;
+
   function readSnowColor() {
     if (!browser) return;
-
     const rgb = getComputedStyle(document.documentElement)
       .getPropertyValue("--text")
       .trim();
-
     snowColor = rgb || "rgba(255,255,255,0.85)";
   }
 
@@ -47,15 +44,20 @@
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
     }
+
+    createFlakes();
   }
 
   function createFlakes() {
     if (!canvas) return;
 
-    flakes = Array.from({ length: COUNT }, () => ({
-      x: Math.random() * (canvas.width / dpr),
-      y: Math.random() * (canvas.height / dpr),
-      r: Math.random() * 1.2 + 1,
+    const area = window.innerWidth * window.innerHeight;
+    const count = Math.max(3, Math.floor(area / 250000));
+
+    flakes = Array.from({ length: count }, () => ({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      r: Math.random() * 1.5 + 1,
       vy: Math.random() * 1 + 0.4,
       vx: Math.random() * 0.6 - 0.3,
       rot: Math.random() * Math.PI * 2,
@@ -64,26 +66,19 @@
   }
 
   function update() {
-    if (!canvas) return;
-
     for (const f of flakes) {
       f.y += f.vy;
       f.x += f.vx;
       f.rot += f.rotSpeed;
 
-      if (f.y > canvas.height) {
-        f.y = -20;
-        f.x = Math.random() * canvas.width;
-      }
-
-      if (f.x < -20) f.x = canvas.width + 20;
-      if (f.x > canvas.width + 20) f.x = -20;
+      if (f.y > window.innerHeight + f.r * 4) f.y = -f.r * 4;
+      if (f.x < -f.r * 4) f.x = window.innerWidth + f.r * 4;
+      if (f.x > window.innerWidth + f.r * 4) f.x = -f.r * 4;
     }
   }
 
   function drawSnowflake(ctx: CanvasRenderingContext2D, r: number) {
     const arms = 6;
-
     for (let i = 0; i < arms; i++) {
       ctx.rotate(Math.PI / 3);
 
@@ -102,9 +97,9 @@
   }
 
   function draw() {
-    if (!running || !ctx || !canvas) return;
+    if (!running || !ctx) return;
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
     ctx.strokeStyle = snowColor;
     ctx.lineWidth = 1;
     ctx.lineCap = "round";
@@ -145,7 +140,6 @@
 
     ctx = canvas.getContext("2d");
     resize();
-    createFlakes();
     readSnowColor();
     draw();
 
