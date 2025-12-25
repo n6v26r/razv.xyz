@@ -233,7 +233,7 @@
   }
 
   .marquee__content {
-    padding-right: 3rem;
+    padding-right: 2rem;
   }
 
   @keyframes marquee {
