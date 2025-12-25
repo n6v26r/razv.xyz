@@ -50,7 +50,7 @@
     if (!canvas) return;
 
     const area = window.innerWidth * window.innerHeight;
-    const count = Math.max(3, Math.floor(area / 250000));
+    const count = Math.min(Math.max(3, Math.floor(area / 250000)), 50);
 
     flakes = Array.from({ length: count }, () => ({
       x: Math.random() * window.innerWidth,
