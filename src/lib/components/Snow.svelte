@@ -139,6 +139,7 @@
     ctx = canvas.getContext("2d");
     resize();
     readSnowColor();
+    createFlakes();
     draw();
 
     window.addEventListener("resize", resize);
