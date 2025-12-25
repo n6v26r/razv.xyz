@@ -44,8 +44,6 @@
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
     }
-
-    createFlakes();
   }
 
   function createFlakes() {
