@@ -17,6 +17,7 @@
   let flakes: Flake[] = [];
   let raf: number | null = null;
   let running = true;
+  const dpr = window.devicePixelRatio || 1;
 
   const COUNT = 10;
 
@@ -35,7 +36,6 @@
 
   function resize() {
     if (!canvas) return;
-    const dpr = window.devicePixelRatio || 1;
 
     canvas.width = window.innerWidth * dpr;
     canvas.height = window.innerHeight * dpr;
@@ -53,8 +53,8 @@
     if (!canvas) return;
 
     flakes = Array.from({ length: COUNT }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
+      x: Math.random() * (canvas.width / dpr),
+      y: Math.random() * (canvas.height / dpr),
       r: Math.random() * 1.2 + 1,
       vy: Math.random() * 1 + 0.4,
       vx: Math.random() * 0.6 - 0.3,
