@@ -176,6 +176,4 @@ Check out the [blog](/blog)!
 <a class="webring-arrow" href="https://ctp-webr.ing/razv/previous"><i class="fa-solid fa-arrow-left"></i></a>
 <a class="webring ctp-webring" href="https://ctp-webr.ing">catppuccin</a>
 <a class="webring-arrow" href="https://ctp-webr.ing/razv/next"><i class="fa-solid fa-arrow-right"></i></a>
-<br>
-(pending)
 </p>
