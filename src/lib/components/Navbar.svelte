@@ -2,7 +2,7 @@
   let pages = [
     ["/", "home"],
     ["/blog", "blog"],
-    // ["/microblog", "µ"],
+    ["/microblog", "µ"],
   ];
   import { page } from "$app/state";
   import ThemeSwitcher from "./ThemeSwitcher.svelte";
@@ -49,9 +49,10 @@
 
     @media only screen and (min-width: 1501px) {
       width: calc(
-        var(--width-page-content-def) + 2 * var(--padding-page-content));
-        // border-left: 2px dashed var(--surface2);
-        // border-right: 2px dashed var(--surface2);
+        var(--width-page-content-def) + 2 * var(--padding-page-content)
+      );
+      // border-left: 2px dashed var(--surface2);
+      // border-right: 2px dashed var(--surface2);
     }
 
     .navbar-pages {
@@ -66,6 +67,7 @@
       height: 100%;
 
       a {
+        position: relative;
         transition: filter 0.5s;
         display: flex;
         justify-content: center;
@@ -92,10 +94,16 @@
         &::before {
           content: "[";
           color: var(--text);
+
+          position: absolute;
+          left: -0.6em;
         }
         &::after {
           content: "]";
           color: var(--text);
+
+          position: absolute;
+          right: -0.6em;
         }
       }
 

@@ -2,13 +2,13 @@
 	import { onMount, tick } from "svelte";
 	import { useCoolHeadings } from "$lib/coolheadings";
 	import { afterNavigate } from "$app/navigation";
-	import Snow from "$lib/components/Snow.svelte"
+	import Snow from "$lib/components/Snow.svelte";
 
 	import "../app.scss";
 	import "@fortawesome/fontawesome-free/css/all.min.css";
 	import Navbar from "$lib/components/Navbar.svelte";
 	import { fly, fade } from "svelte/transition";
-    import { browser } from "$app/environment";
+	import { browser } from "$app/environment";
 
 	export let data;
 	let visible = false;
@@ -23,11 +23,11 @@
 		useCoolHeadings();
 	});
 
-  const today = new Date();
-  const month = today.getMonth();
-  const day = today.getDate();
+	const today = new Date();
+	const month = today.getMonth();
+	const day = today.getDate();
 
-  const isSnowSeason = month === 11 && day >= 24 && day <= 26;
+	const isSnowSeason = month === 11 && day >= 24 && day <= 26;
 </script>
 
 <svelte:head>
@@ -41,7 +41,7 @@
 </svelte:head>
 
 {#if browser && isSnowSeason}
-	<Snow/>
+	<Snow />
 {/if}
 
 <Navbar />
