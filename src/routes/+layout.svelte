@@ -27,7 +27,7 @@
 	const month = today.getMonth();
 	const day = today.getDate();
 
-	const isSnowSeason = month === 11 && day >= 24 && day <= 26;
+	const isSnowSeason = month === 11 && day >= 20;
 </script>
 
 <svelte:head>
