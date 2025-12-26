@@ -7,11 +7,11 @@ I'm sick of brainrot, let's bring back 2000's emo culture! Nostalgia for times y
 
 Is "OwO" (and variations) the modern equivalent for "rawr XD"?
 
-<div class="post-date">25/12/2025</div>
+<div class="entry-date">25/12/2025</div>
 </div>
 
 <div class="entry">
-<p align="center" class="funtext">Merry xmas guys!</p>
+<p align="center" class="funtext">Merry Xmas, guys!</p>
 
 ```cpp
 #include <stdio.h>
@@ -24,7 +24,7 @@ int main() {
 }
 ```
 
-<div class="post-date">25/12/2025</div>
+<div class="entry-date">25/12/2025</div>
 </div>
 
 <div class="entry">
@@ -32,7 +32,7 @@ int main() {
 Font subsetting is so op.<br/>
 Just went 1.2MB to 22KB! I's speeeedy now yuhuu!
 
-<div class="post-date">20/12/2025</div>
+<div class="entry-date">20/12/2025</div>
 </div>
 
 <div class="entry">
@@ -40,7 +40,7 @@ Just went 1.2MB to 22KB! I's speeeedy now yuhuu!
 Why do programmers confuse Halloween and Christmas?<br />
 'Cause 25 dec = 31 oct.
 
-<div class="post-date">16/12/2025</div>
+<div class="entry-date">16/12/2025</div>
 </div>
 
 <style lang="scss">
@@ -55,7 +55,7 @@ Why do programmers confuse Halloween and Christmas?<br />
     }
   }
 
-  div.post-date {
+  div.entry-date {
     color: var(--subtext0);
     margin-top: var(--space-md);
 
