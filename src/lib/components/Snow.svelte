@@ -52,15 +52,24 @@
     const area = window.innerWidth * window.innerHeight;
     const count = Math.min(Math.max(3, Math.floor(area / 220000)), 10);
 
-    flakes = Array.from({ length: count }, () => ({
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-      r: Math.random() * 1.5 + 1,
-      vy: Math.random() * 1 + 0.4,
-      vx: Math.random() * 0.6 - 0.3,
-      rot: Math.random() * Math.PI * 2,
-      rotSpeed: Math.random() * 0.01 - 0.005,
-    }));
+    flakes = Array.from({ length: count }, () => {
+      const f: Flake = {} as Flake;
+      respawnFlake(f, true);
+      return f;
+    });
+  }
+
+  function respawnFlake(f, initial = false) {
+    f.x = Math.random() * window.innerWidth;
+    f.y = initial
+      ? Math.random() * window.innerHeight
+      : -Math.random() * window.innerHeight * 0.2;
+
+    f.r = Math.random() * 1.5 + 1;
+    f.vy = Math.random() * 1 + 0.4;
+    f.vx = Math.random() * 0.6 - 0.3;
+    f.rot = Math.random() * Math.PI * 2;
+    f.rotSpeed = Math.random() * 0.01 - 0.005;
   }
 
   function update() {
@@ -69,7 +78,10 @@
       f.x += f.vx;
       f.rot += f.rotSpeed;
 
-      if (f.y > window.innerHeight + f.r * 4) f.y = -f.r * 4;
+      if (f.y > window.innerHeight + f.r * 4) {
+        respawnFlake(f);
+      }
+
       if (f.x < -f.r * 4) f.x = window.innerWidth + f.r * 4;
       if (f.x > window.innerWidth + f.r * 4) f.x = -f.r * 4;
     }
