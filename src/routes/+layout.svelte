@@ -3,6 +3,7 @@
 	import { useCoolHeadings } from "$lib/coolheadings";
 	import { afterNavigate } from "$app/navigation";
 	import Snow from "$lib/components/Snow.svelte";
+	import Fireworks from "$lib/components/Fireworks.svelte";
 
 	import "../app.scss";
 	import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -27,7 +28,8 @@
 	const month = today.getMonth();
 	const day = today.getDate();
 
-	const isSnowSeason = month === 11 && day >= 20;
+	const isSnowSeason = month === 11 && day >= 20 && day < 31;
+	const isNewYear = (month === 11 && day == 31) || (month == 0 && day == 1);
 </script>
 
 <svelte:head>
@@ -40,8 +42,13 @@
 	</script>
 </svelte:head>
 
-{#if browser && isSnowSeason}
-	<Snow />
+{#if browser}
+	{#if isSnowSeason}
+		<Snow />
+	{/if}
+	{#if isNewYear}
+		<Fireworks />
+	{/if}
 {/if}
 
 <Navbar />
