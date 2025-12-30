@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount, onDestroy } from "svelte";
-  import { browser } from "$app/environment";
 
   interface Flake {
     x: number;
@@ -21,10 +20,9 @@
   let snowColor = "rgba(255,255,255,0.85)";
   let themeObserver: MutationObserver | null = null;
 
-  const dpr = browser ? window.devicePixelRatio || 1 : 1;
+  const dpr = window.devicePixelRatio || 1;
 
   function readSnowColor() {
-    if (!browser) return;
     const rgb = getComputedStyle(document.documentElement)
       .getPropertyValue("--text")
       .trim();
@@ -59,7 +57,7 @@
     });
   }
 
-  function respawnFlake(f, initial = false) {
+  function respawnFlake(f: Flake, initial = false) {
     f.x = Math.random() * window.innerWidth;
     f.y = initial
       ? Math.random() * window.innerHeight
@@ -72,11 +70,17 @@
     f.rotSpeed = Math.random() * 0.01 - 0.005;
   }
 
+  let lastTime = performance.now();
+
   function update() {
+    const now = performance.now();
+    const deltaTime = (now - lastTime) / 1000;
+    lastTime = now;
+
     for (const f of flakes) {
-      f.y += f.vy;
-      f.x += f.vx;
-      f.rot += f.rotSpeed;
+      f.y += f.vy * 60 * deltaTime;
+      f.x += f.vx * 60 * deltaTime;
+      f.rot += f.rotSpeed * 60 * deltaTime;
 
       if (f.y > window.innerHeight + f.r * 4) {
         respawnFlake(f);
@@ -146,7 +150,7 @@
   }
 
   onMount(() => {
-    if (!browser || !canvas) return;
+    if (!canvas) return;
 
     ctx = canvas.getContext("2d");
     resize();
@@ -172,15 +176,13 @@
   });
 </script>
 
-{#if browser}
-  <canvas
-    bind:this={canvas}
-    aria-hidden="true"
-    style="
+<canvas
+  bind:this={canvas}
+  aria-hidden="true"
+  style="
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: 9999;
     "
-  ></canvas>
-{/if}
+></canvas>
