@@ -37,7 +37,7 @@ int main() {
 <div class="entry">
 
 Font subsetting is so op.<br/>
-Just went 1.2MB to 22KB! I's speeeedy now yuhuu!
+Just went from 1.2MB to 22KB! I's speeeedy now yuhuu!
 
 <div class="entry-date">20/12/2025</div>
 </div>
@@ -45,7 +45,7 @@ Just went 1.2MB to 22KB! I's speeeedy now yuhuu!
 <div class="entry">
 
 Why do programmers confuse Halloween and Christmas?<br />
-'Cause 25 dec = 31 oct.
+'Cause 25 Dec = 31 Oct.
 
 <div class="entry-date">16/12/2025</div>
 </div>
