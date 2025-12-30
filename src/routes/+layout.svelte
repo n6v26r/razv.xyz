@@ -29,7 +29,7 @@
 	const day = today.getDate();
 
 	const isSnowSeason = month === 11 && day >= 20 && day < 31;
-	const isNewYear = (month === 11 && day == 31) || (month == 0 && day == 1);
+	const isNewYear = (month === 11 && day == 30) || (month == 0 && day == 1);
 </script>
 
 <svelte:head>
@@ -66,10 +66,56 @@
 				</div>
 			{/key}
 		</div>
+	{:else}
+		<div class="loading-outer-wrapper">
+			<div class="loading-wrapper">
+				<h1>Loading... ( &gt; _ &lt; )</h1>
+				<div class="loading-inner-div">
+					<p>Damn ur internet is slow.</p>
+				</div>
+			</div>
+		</div>
 	{/if}
 </div>
 
 <style lang="scss">
+	h1 {
+		color: var(--blue);
+		margin-top: 0;
+	}
+
+	.loading-outer-wrapper {
+		display: flex;
+		justify-content: center;
+		height: calc(100dvh - var(--height-nav));
+		align-items: center;
+
+		opacity: 0;
+		animation: showOverlay 0.5s forwards;
+		animation-delay: 1.5s;
+	}
+
+	.loading-inner-div {
+		opacity: 0;
+		animation: showOverlay 0.5s forwards;
+		animation-delay: 3s;
+	}
+
+	@keyframes showOverlay {
+		to {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+
+	.loading-wrapper {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
 	div {
 		min-height: 100%;
 	}
