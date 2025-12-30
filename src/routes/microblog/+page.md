@@ -3,6 +3,13 @@
 
 <div class="entry">
 
+Sleep schedule is a lie sold by the government to control us!
+
+<div class="entry-date">30/12/2025 (at 4am)</div>
+</div>
+
+<div class="entry">
+
 I'm sick of brainrot, let's bring back 2000's emo culture! Nostalgia for times you never lived is so real...
 
 Is "OwO" (and variations) the modern equivalent for "rawr XD"?
@@ -53,6 +60,10 @@ Why do programmers confuse Halloween and Christmas?<br />
     p {
       margin-top: 0;
     }
+  }
+
+  div.entry:first-of-type {
+    border: 2px dashed var(--overlay0);
   }
 
   div.entry-date {
