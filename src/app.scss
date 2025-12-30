@@ -265,8 +265,7 @@ code:not([class^="language-"]) {
 
 code[class^="language-"] {
   font-size: 0.8em;
-  padding-right: 1em;
-  padding-left: 1em;
+  padding: 1em;
   display: block;
   overflow: auto;
   tab-size: 2;
