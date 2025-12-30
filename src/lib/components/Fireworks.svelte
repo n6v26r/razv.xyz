@@ -19,6 +19,7 @@
     vy: number;
     exploded: boolean;
     targetY: number;
+    color: string;
   }
 
   let canvas: HTMLCanvasElement | null = null;
@@ -39,7 +40,6 @@
     2,
   );
 
-  const rocketsToLaunch = 8;
   let rocketsLaunched = 0;
 
   let colors: string[] = [];
@@ -47,12 +47,14 @@
   let themeObserver: MutationObserver | null = null;
 
   const colorVars = [
-    "--yellow",
     "--peach",
-    "--red",
     "--blue",
-    "--pink",
+    "--red",
+    "--maroon",
     "--mauve",
+    "--pink",
+    "--green",
+    "--lavender",
   ];
 
   function readFireworkColors() {
@@ -79,7 +81,7 @@
     ctx.scale(dpr, dpr);
   }
 
-  function launchRocket() {
+  function launchRocket(color: string) {
     rockets.push({
       x: Math.random() * window.innerWidth * 0.8 + window.innerWidth * 0.1,
       y: window.innerHeight,
@@ -87,11 +89,11 @@
       exploded: false,
       targetY:
         Math.random() * window.innerHeight * 0.45 + window.innerHeight * 0.15,
+      color: color,
     });
   }
 
-  function explode(x: number, y: number) {
-    const baseColor = colors[Math.floor(Math.random() * colors.length)];
+  function explode(x: number, y: number, color: string) {
     const count = Math.floor((60 + Math.random() * 40) * screenFactor);
 
     for (let i = 0; i < count; i++) {
@@ -106,7 +108,7 @@
         life: Math.floor((30 + Math.random() * 20) * screenFactor),
         maxLife: 50,
         alpha: 1,
-        color: baseColor,
+        color: color,
         size: Math.random() * 2 + 1.5,
       });
     }
@@ -125,7 +127,7 @@
 
       if (!r.exploded && r.y <= r.targetY) {
         r.exploded = true;
-        explode(r.x, r.y);
+        explode(r.x, r.y, r.color);
       }
     });
 
@@ -177,7 +179,7 @@
     if (
       rockets.length === 0 &&
       particles.length === 0 &&
-      rocketsLaunched == rocketsToLaunch
+      rocketsLaunched == colors.length
     ) {
       setTimeout(pause, 500);
     }
@@ -210,9 +212,9 @@
     ctx = canvas.getContext("2d");
     resize();
     readFireworkColors();
-    for (let i = 0; i < rocketsToLaunch; i++) {
+    for (let i = 0; i < colors.length; i++) {
       setTimeout(() => {
-        launchRocket();
+        launchRocket(colors[i]);
         rocketsLaunched++;
       }, i * 300);
     }
