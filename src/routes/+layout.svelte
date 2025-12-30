@@ -92,13 +92,13 @@
 
 		opacity: 0;
 		animation: showOverlay 0.5s forwards;
-		animation-delay: 1.5s;
+		animation-delay: 0.5s;
 	}
 
 	.loading-inner-div {
 		opacity: 0;
 		animation: showOverlay 0.5s forwards;
-		animation-delay: 3s;
+		animation-delay: 1.5s;
 	}
 
 	@keyframes showOverlay {
