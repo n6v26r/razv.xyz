@@ -29,7 +29,7 @@
 	const day = today.getDate();
 
 	const isSnowSeason = month === 11 && day >= 20 && day < 31;
-	const isNewYear = (month === 11 && day == 30) || (month == 0 && day == 1);
+	const isNewYear = (month === 11 && day == 31) || (month == 0 && day == 1);
 </script>
 
 <svelte:head>
