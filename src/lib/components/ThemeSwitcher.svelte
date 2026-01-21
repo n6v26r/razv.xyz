@@ -126,7 +126,7 @@
 
   @keyframes move-out {
     0% {
-      clip-path: circle(150% at var(--vt-x) var(--vt-y));
+      clip-path: circle(160% at var(--vt-x) var(--vt-y));
     }
 
     100% {
