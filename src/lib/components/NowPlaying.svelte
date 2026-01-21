@@ -220,10 +220,6 @@
     );
     mask-repeat: no-repeat;
     mask-size: 100% 100%;
-
-    &:hover .marquee {
-      animation-play-state: paused;
-    }
   }
 
   .marquee {
