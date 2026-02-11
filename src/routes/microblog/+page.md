@@ -3,6 +3,15 @@
 
 <div class="entry">
 
+Made a little pastebin thingy: [pasteit.zip](https://pasteit.zip)
+
+_Yes, I know there is an oversaturation of pastebins on the internet, but I was bored :P and this is prob the first one made with Zig._
+
+<div class="entry-date">11/02/2026</div>
+</div>
+
+<div class="entry">
+
 Sleep schedule is a lie sold by the government to control us!
 
 <div class="entry-date">30/12/2025 (at 4am)</div>
@@ -10,9 +19,9 @@ Sleep schedule is a lie sold by the government to control us!
 
 <div class="entry">
 
-I'm sick of brainrot, let's bring back 2000's emo culture! Nostalgia for times you never lived is so real...
+I'm sick of brainrot, let's bring back 2000s emo culture! Nostalgia for times you never lived is so real...
 
-Is "OwO" (and variations) the modern equivalent for "rawr XD"?
+Is "OwO" (and variations) the modern equivalent of "rawr XD"?
 
 <div class="entry-date">25/12/2025</div>
 </div>
@@ -37,7 +46,7 @@ int main() {
 <div class="entry">
 
 Font subsetting is so op.<br/>
-Just went from 1.2MB to 22KB! I's speeeedy now yuhuu!
+Just went from 1.2MB to 22KB! It's speeeedy now yuhuu!
 
 <div class="entry-date">20/12/2025</div>
 </div>
